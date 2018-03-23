@@ -1,0 +1,10 @@
+include LICENSE AUTHORS README CHANGES
+recursive-include docs *
+recursive-include lantz-drivers *
+
+include *.txt
+include .travis.yml
+
+global-exclude *.pyc *.pyo .DS_Store
+prune docs/_build
+prune docs/_themes/.git

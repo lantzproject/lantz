@@ -1,0 +1,2 @@
+lantz_core
+-r requirements-doc.txt
