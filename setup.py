@@ -29,9 +29,14 @@ setup(name='lantz',
       python_requires='>=3.6',
       install_requires=['lantz_core>=0.5.dev0',
                         'lantz_drivers>=0.5.dev0',
-                        'lantz_qt>=0.5.dev0',
                         'lantz_sims>=0.5.dev0',
                         ],
+      extras_require={
+          'gui': [
+              'lantz_qt>=0.5.dev0',
+              'cutelog',
+          ]
+      },
       packages=['lantz'],
       zip_safe=False,
       platforms='any',

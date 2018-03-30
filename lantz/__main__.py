@@ -9,7 +9,7 @@ def get_subcommands():
             sc[entry_point.name] = entry_point.load()
         except Exception as e:
             er[entry_point.name] = str(e)
-    
+
     return sc, er
 
 
