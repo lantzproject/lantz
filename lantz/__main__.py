@@ -22,7 +22,8 @@ def main(args=None):
     scs, ers = get_subcommands()
 
     if ers:
-        epilog = '\n'.join(('- %s: %s' % k, v for k, v in ers.items()))
+        lines = ('- %s: %s' % (k, v) for k, v in ers.items())
+        epilog = '\n'.join(lines)
     else:
         epilog = None
 
