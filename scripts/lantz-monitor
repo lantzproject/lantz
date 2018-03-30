@@ -362,6 +362,7 @@ class InstrumentState(object):
         if hasattr(record, 'lantz_feat'):
             self.feats[record.lantz_feat[0]] = record.lantz_feat[1]
 
+
 class LantzMonitor(SocketListener):
     """Text UI to display log records incoming via tcp or udp.
     """

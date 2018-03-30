@@ -27,14 +27,19 @@ setup(name='lantz',
       author_email='hernan.grecco@gmail.com',
       url='https://github.com/lantzproject',
       python_requires='>=3.6',
-      install_requires=['lantz-core',
-                        'lantz-drivers',
-                        'lantz-qt',
-                        'lantz-sims',
+      install_requires=['lantz_core',
+                        'lantz_drivers',
+                        'lantz_qt',
+                        'lantz_sims',
                         ],
       packages=['lantz'],
       zip_safe=False,
       platforms='any',
+      entry_points={
+          'console_scripts': [
+              'lantz = lantz.__main__:main'
+          ],
+      },
       classifiers=[
            'Development Status :: 4 - Beta',
            'Intended Audience :: Developers',
