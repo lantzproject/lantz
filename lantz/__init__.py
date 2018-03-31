@@ -5,7 +5,7 @@ import lantz_sims as sims
 
 from lantz_core import Driver, Feat, DictFeat, Action, MessageBasedDriver, Q_
 
-__all__ = ['core', 'drivers', 'qt', 'sims', 'log',
+__all__ = ['core', 'drivers', 'sims', 'log',
            'Driver', 'Feat', 'DictFeat', 'Action',
            'MessageBasedDriver', 'Q_']
 
