@@ -24,6 +24,7 @@ def main(args=None):
     if ers:
         lines = ('- %s: %s' % (k, v) for k, v in ers.items())
         epilog = '\n'.join(lines)
+        epilog = 'Could not load the following subcommands:\n' + epilog
     else:
         epilog = None
 
