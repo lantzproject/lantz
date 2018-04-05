@@ -7,5 +7,28 @@ for building applications that communicate with scientific instruments allowing
 rapid application prototyping, development and testing.
 
 
-
 The Lantz Authors
+
+
+Having fun
+----------
+
+You can try this version by installing from git. On your terminal:
+
+conda create --name lantz python=3.6 pyqt
+source activate lantz
+pip install -U https://github.com/lantzproject/lantz_core/zipball/master
+pip install -U https://github.com/lantzproject/lantz_drivers/zipball/master
+pip install -U https://github.com/lantzproject/lantz_qt/zipball/master
+pip install -U https://github.com/lantzproject/lantz_sims/zipball/master
+pip install -U https://github.com/lantzproject/lantz/zipball/master
+
+
+And then, start the simulator in one terminal:
+
+lantz sims fungen tcp
+
+and the testpanel in another:
+
+lantz qtdemo testpanel
+
