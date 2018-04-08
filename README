@@ -10,8 +10,8 @@ rapid application prototyping, development and testing.
 The Lantz Authors
 
 
-Having fun
-----------
+Install from git
+----------------
 
 You can try this version by installing from git. On your terminal:
 
@@ -23,8 +23,20 @@ pip install -U https://github.com/lantzproject/lantz_qt/zipball/master
 pip install -U https://github.com/lantzproject/lantz_sims/zipball/master
 pip install -U https://github.com/lantzproject/lantz/zipball/master
 
+If you do not have the NI-VISA library installed, install the pure python
+replacement by running the following command in your terminal:
 
-And then, start the simulator in one terminal:
+pip install pyvisa-py
+
+and then tell Lantz to use it:
+
+lantz config core.visa_backend @py
+
+
+Having fun
+----------
+
+Start the simulator in one terminal:
 
 lantz sims fungen tcp
 
