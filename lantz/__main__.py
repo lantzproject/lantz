@@ -28,12 +28,22 @@ def main(args=None):
     else:
         epilog = None
 
-    parser = argparse.ArgumentParser(description='Lantz', epilog=epilog)
+    parser = argparse.ArgumentParser(description='Lantz', epilog=epilog, add_help=False)
+    parser.add_argument('-h', '--help', action='store_true')
     parser.add_argument('subcommand',
-                        choices=list(scs.keys()))
+                        choices=list(scs.keys()),
+                        nargs='?')
     args, pending = parser.parse_known_args(args)
 
-    scs[args.subcommand](pending)
+    if args.subcommand is None:
+        if args.help:
+            parser.print_help()
+        else:
+            parser.print_usage()
+    else:
+        if args.help:
+            pending += ['--help', ]
+        scs[args.subcommand](pending)
 
 
 if __name__ == '__main__':
