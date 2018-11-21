@@ -17,7 +17,7 @@ def main(args=None):
     """Dispatch to sub commands
     """
 
-    import argparse
+    from . import ArgumentParserSC
 
     scs, ers = get_subcommands()
 
@@ -28,22 +28,9 @@ def main(args=None):
     else:
         epilog = None
 
-    parser = argparse.ArgumentParser(description='Lantz', epilog=epilog, add_help=False)
-    parser.add_argument('-h', '--help', action='store_true')
-    parser.add_argument('subcommand',
-                        choices=list(scs.keys()),
-                        nargs='?')
-    args, pending = parser.parse_known_args(args)
+    parser = ArgumentParserSC('subcommand', scs, description='Lantz', epilog=epilog)
 
-    if args.subcommand is None:
-        if args.help:
-            parser.print_help()
-        else:
-            parser.print_usage()
-    else:
-        if args.help:
-            pending += ['--help', ]
-        scs[args.subcommand](pending)
+    parser.dispatch(args)
 
 
 if __name__ == '__main__':
