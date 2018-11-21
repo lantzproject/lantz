@@ -27,13 +27,13 @@ setup(name='lantz',
       author_email='hernan.grecco@gmail.com',
       url='https://github.com/lantzproject',
       python_requires='>=3.6',
-      install_requires=['lantz_core>=0.5.dev0',
-                        'lantz_drivers>=0.5.dev0',
-                        'lantz_sims>=0.5.dev0',
+      install_requires=['lantz-core>=0.5.dev0',
+                        'lantz-drivers>=0.5.dev0',
+                        'lantz-sims>=0.5.dev0',
                         ],
       extras_require={
           'gui': [
-              'lantz_qt>=0.5.dev0',
+              'lantz-qt>=0.5.dev0',
               'cutelog',
           ]
       },

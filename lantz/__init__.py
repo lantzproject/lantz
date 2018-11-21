@@ -1,25 +1,9 @@
 
-import lantz_core as core
-import lantz_drivers as drivers
-import lantz_sims as sims
 
-from lantz_core import Driver, Feat, DictFeat, Action, MessageBasedDriver, Q_
+__path__ = __import__('pkgutil').extend_path(__path__, __name__)
 
-__all__ = ['core', 'drivers', 'sims', 'log',
-           'Driver', 'Feat', 'DictFeat', 'Action',
-           'MessageBasedDriver', 'Q_']
-
-try:
-    import lantz_qt as qt
-    __all__.append('qt')
-except ImportError:
-    pass
+from lantz.core import Driver, Feat, DictFeat, Action, MessageBasedDriver, Q_
 
 
-from lantz_core import errors, log
 
-import sys
-sys.modules['lantz.log'] = log
-sys.modules['lantz.errors'] = errors
-sys.modules['lantz.drivers'] = drivers
-sys.modules['lantz.messagebased'] = core.messagebased
+
