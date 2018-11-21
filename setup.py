@@ -18,7 +18,7 @@ long_description = '\n\n'.join([read('README'),
 __doc__ = long_description
 
 setup(name='lantz',
-      version='0.5.dev0',
+      version='0.5.dev1',
       license='BSD',
       description='Instrumentation framework',
       long_description=long_description,
@@ -27,13 +27,13 @@ setup(name='lantz',
       author_email='hernan.grecco@gmail.com',
       url='https://github.com/lantzproject',
       python_requires='>=3.6',
-      install_requires=['lantz-core>=0.5.dev0',
-                        'lantz-drivers>=0.5.dev0',
-                        'lantz-sims>=0.5.dev0',
+      install_requires=['lantz-core>=0.5.dev1',
+                        'lantz-drivers>=0.5.dev1',
+                        'lantz-sims>=0.5.dev1',
                         ],
       extras_require={
           'gui': [
-              'lantz-qt>=0.5.dev0',
+              'lantz-qt>=0.5.dev1',
               'cutelog',
           ]
       },
