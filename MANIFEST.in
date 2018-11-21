@@ -1,6 +1,6 @@
 include LICENSE AUTHORS README CHANGES
 recursive-include docs *
-recursive-include lantz-drivers *
+recursive-include lantz *
 
 include *.txt
 include .travis.yml
