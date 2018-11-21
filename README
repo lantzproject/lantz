@@ -21,6 +21,7 @@ pip install -U https://github.com/lantzproject/lantz_core/zipball/master
 pip install -U https://github.com/lantzproject/lantz_drivers/zipball/master
 pip install -U https://github.com/lantzproject/lantz_qt/zipball/master
 pip install -U https://github.com/lantzproject/lantz_sims/zipball/master
+pip install -U https://github.com/lantzproject/lantz_ino/zipball/master
 pip install -U https://github.com/lantzproject/lantz/zipball/master
 
 If you do not have the NI-VISA library installed, install the pure python
