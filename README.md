@@ -13,7 +13,7 @@ package.
 Installing
 ----------
 
-You can install the 
+You can install the full version very easily:
 
     pip install -U "lantzdev[full]"
 
