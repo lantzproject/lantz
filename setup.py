@@ -34,16 +34,13 @@ setup(name='lantzdev',
       extras_require={
           'qt': [
               'lantz-qt>=0.5.dev1',
-              'cutelog',
           ],
           'ino': [
               'lantz-ino>=0.5.dev1',
-              'cutelog',
           ],
           'full': [
               'lantz-qt>=0.5.dev1',
               'lantz-ino>=0.5.dev1',
-              'cutelog',
           ]
       },
       packages=['lantz'],
