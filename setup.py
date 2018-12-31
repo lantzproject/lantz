@@ -11,13 +11,13 @@ def read(filename):
     return codecs.open(filename, encoding='utf-8').read()
 
 
-long_description = '\n\n'.join([read('README'),
+long_description = '\n\n'.join([read('README.md'),
                                 read('AUTHORS'),
                                 read('CHANGES')])
 
 __doc__ = long_description
 
-setup(name='lantz',
+setup(name='lantzdev',
       version='0.5.dev1',
       license='BSD',
       description='Instrumentation framework',
