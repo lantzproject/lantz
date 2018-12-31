@@ -6,6 +6,8 @@ Lantz-drivers Changelog
 ----------------
 
 - Splited repo into core, drives and qt.
+- Added multiple extra_requires entries: full, qt, ino
+- Added lantz root command line application
 
 
 0.3 (2015-02-05)

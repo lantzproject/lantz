@@ -26,6 +26,12 @@ from stringparser import Parser
 
 from lantz.log import ColorizingFormatter, SocketListener
 
+
+def queue_from_record(rec):
+    # TODO
+    return ('a', 'b')
+    #return rec.lantz_driver, rec.lantz_name
+
 try:
     from msvcrt import getch
 except ImportError:
@@ -141,7 +147,7 @@ class MessageListFormatter(ColorizingFormatter):
         buf.write(self.title)
         for row, saved_record in zip(range(self.ROWS), self.last_records):
             buf.write(pos(row + self.FIRST_ROW, 0))
-            queue = saved_record.lantz_driver, saved_record.lantz_name
+            queue = queue_from_record(saved_record)
             if queue == self._current:
                 buf.write(self.SEL + ' ' + Style.RESET_ALL)
             else:
@@ -210,7 +216,7 @@ class DriverListFormatter(ColorizingFormatter):
             self._write_record_helper(num, name, state, buf)
 
     def _write_record(self, record, buf):
-        queue = record.lantz_driver, record.lantz_name
+        queue = queue_from_record(record)
         num = list(self.queues.keys()).index(queue)
         state = self.queues[queue]
         self._write_record_helper(num, queue, state, buf)
@@ -313,7 +319,7 @@ class DriverFormatter(ColorizingFormatter):
             buf.write('  ' + super().format(saved_record))
 
     def _write_record(self, record, buf):
-        queue = record.lantz_driver, record.lantz_name
+        queue = queue_from_record(record)
         state = self.queues[queue]
         if hasattr(record, 'lantz_feat'):
             if queue not in self.queues:
@@ -445,7 +451,7 @@ class LantzMonitor(SocketListener):
         if record.levelno < self.level:
             return
         with self._lock:
-            queue = record.lantz_driver, record.lantz_name
+            queue = queue_from_record(record)
             if queue not in self.queues:
                 self.queues[queue] = InstrumentState()
                 self.retitle()
