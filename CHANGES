@@ -2,10 +2,10 @@ Lantz-drivers Changelog
 =======================
 
 
-0.5.1 (unreleased)
+0.5.1 (2018-12-31)
 ------------------
 
-- Nothing changed yet.
+- Removed cutelog dependency.
 
 
 0.5 (2018-12-31)
