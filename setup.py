@@ -32,8 +32,17 @@ setup(name='lantz',
                         'lantz-sims>=0.5.dev1',
                         ],
       extras_require={
-          'gui': [
+          'qt': [
               'lantz-qt>=0.5.dev1',
+              'cutelog',
+          ],
+          'ino': [
+              'lantz-ino>=0.5.dev1',
+              'cutelog',
+          ],
+          'full': [
+              'lantz-qt>=0.5.dev1',
+              'lantz-ino>=0.5.dev1',
               'cutelog',
           ]
       },
