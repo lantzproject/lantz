@@ -6,6 +6,9 @@ and consistent interface.  It provides a core of commonly used functionalities
 for building applications that communicate with scientific instruments allowing
 rapid application prototyping, development and testing.
 
+The package is name lantzdev (not lantz) to avoid name collision with previous 
+package.
+
 
 Installing
 ----------
