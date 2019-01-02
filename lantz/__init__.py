@@ -1,8 +1,20 @@
 
 
+import sys
+
 __path__ = __import__('pkgutil').extend_path(__path__, __name__)
 
-from lantz.core import Driver, Feat, DictFeat, Action, MessageBasedDriver, Q_, errors, mfeats
+from lantz.core import Driver, MessageBasedDriver
+from lantz.core.foreign import LibraryDriver
+from lantz.core import Feat, DictFeat, Action
+from lantz.core import ureg, Q_
+
+from lantz.core import errors, log, messagebased, driver, processors
+sys.modules['lantz.log'] = log
+sys.modules['lantz.errors'] = errors
+sys.modules['lantz.messagebased'] = messagebased
+sys.modules['lantz.driver'] = driver
+sys.modules['lantz.processors'] = processors
 
 
 import argparse
