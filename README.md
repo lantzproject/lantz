@@ -33,9 +33,7 @@ Having fun
 If you do not have the NI-VISA library installed, install the pure python
 replacement by running the following command in your terminal:
 
-    conda create --name lantz python=3.6 pyqt
-    
-    conda activate lantz
+    pip install pyvisa-py    
 
 and then tell Lantz to use it:
 
