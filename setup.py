@@ -27,20 +27,20 @@ setup(name='lantzdev',
       author_email='hernan.grecco@gmail.com',
       url='https://github.com/lantzproject',
       python_requires='>=3.6',
-      install_requires=['lantz-core>=0.5.dev1',
-                        'lantz-drivers>=0.5.dev1',
-                        'lantz-sims>=0.5.dev1',
+      install_requires=['lantz-core>=0.5',
+                        'lantz-drivers>=0.5',
+                        'lantz-sims>=0.5',
                         ],
       extras_require={
           'qt': [
-              'lantz-qt>=0.5.dev1',
+              'lantz-qt>=0.5',
           ],
           'ino': [
-              'lantz-ino>=0.5.dev1',
+              'lantz-ino>=0.5',
           ],
           'full': [
-              'lantz-qt>=0.5.dev1',
-              'lantz-ino>=0.5.dev1',
+              'lantz-qt>=0.5',
+              'lantz-ino>=0.5',
           ]
       },
       packages=['lantz'],

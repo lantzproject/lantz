@@ -9,6 +9,10 @@ from lantz.core.foreign import LibraryDriver
 from lantz.core import Feat, DictFeat, Action
 from lantz.core import ureg, Q_
 
+from lantz.core import initialize_many, finalize_many
+from lantz.core.flock import Flock
+from lantz.core.processors import DimensionalityWarning
+
 from lantz.core import errors, log, messagebased, driver, processors
 sys.modules['lantz.log'] = log
 sys.modules['lantz.errors'] = errors
