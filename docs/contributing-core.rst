@@ -40,7 +40,12 @@ and in Windows::
 
 and then install an editable package from `Lantz at Github`_::
 
-    $ pip install -e git+git://github.com/hgrecco/lantz.git#egg=lantz
+    $ pip install -U git+git://github.com/lantzproject/lantz-core.git#egg=lantz-core
+    $ pip install -U git+git://github.com/lantzproject/lantz-drivers.git#egg=lantz-drivers
+    $ pip install -U git+git://github.com/lantzproject/lantz-qt.git#egg=lantz-qt
+    $ pip install -U git+git://github.com/lantzproject/lantz-sims.git#egg=lantz-sims
+    $ pip install -U git+git://github.com/lantzproject/lantz-ino.git#egg=lantz-ino
+    $ pip install -U git+git://github.com/lantzproject/lantz.git#egg=lantz-git
 
 You will find the code in `~/lantzenv/src/lantz` (OSX/Linux) or
 `%USERPROFILE%\\Desktop\\lantzenv\\src\\lantz` (Windows).
