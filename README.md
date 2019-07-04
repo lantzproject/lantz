@@ -77,7 +77,7 @@ If in aditional to **Minimal** you want to build arduino drivers.
     
 ### Qt 
 
-If in aditional to **Minimal** you want to build arduino drivers.
+If in aditional to **Minimal** you want to build graphical Qt widgets.
     
     pip install -U "lantzdev[qt]"
 
@@ -88,7 +88,7 @@ If in aditional to **Minimal** you want to build arduino drivers.
 
 #### Full
 
-    pip install -U "lantzdev[qt]"
+    pip install -U "lantzdev[full]"
 
 
 - subpackages used: *core, drivers, sims, ino, qt*
